@@ -31,12 +31,12 @@ app.post('/post', (req, res)=>{
 })
 
 
-if(process.env.NODE_ENV === 'production') {
-    app.use(express.static('scroll/build'));
-    app.get('*', function(req, res){
-        res.sendFile(path.resolve(__dirname, 'scroll', 'build', 'index.html'));
-    })
-}
+// if(process.env.NODE_ENV === 'production') {
+//     app.use(express.static('scroll/build'));
+//     app.get('*', function(req, res){
+//         res.sendFile(path.resolve(__dirname, 'scroll', 'build', 'index.html'));
+//     })
+// }
 
 app.listen(process.env.PORT || 3001, () => {
     console.log('server started');
